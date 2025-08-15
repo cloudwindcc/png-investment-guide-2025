@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /index-en.html
+Allow: /additional-projects-optimized.html
+Allow: /beautiful-version.html
+Allow: /seo-optimized.html
+Allow: /ultimate-enhanced.html
+
+# 禁止访问的目录
+Disallow: /images/private/
+Disallow: /admin/
+Disallow: /temp/
+
+# 站点地图
+Sitemap: https://pnginvestor.com/sitemap.xml
+Sitemap: https://pnginvestor.com/sitemap-index.xml
+
+# 针对特定搜索引擎的额外指令
+User-agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.pdf
+
+User-agent: Bingbot
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.pdf
