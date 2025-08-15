@@ -144,27 +144,31 @@
 
     <style>
         :root {
-            --primary: #FF6B35;
-            --secondary: #1E3A8A;
-            --accent: #3B82F6;
-            --success: #10B981;
-            --warning: #F59E0B;
-            --error: #EF4444;
-            --neutral-50: #f9fafb;
-            --neutral-100: #f3f4f6;
-            --neutral-200: #e5e7eb;
-            --neutral-300: #d1d5db;
-            --neutral-400: #9ca3af;
-            --neutral-500: #6b7280;
-            --neutral-600: #4b5563;
-            --neutral-700: #374151;
-            --neutral-800: #1f2937;
-            --neutral-900: #111827;
+            --primary: #0A2463;
+            --secondary: #3E92CC;
+            --accent: #1E88E5;
+            --success: #00C853;
+            --warning: #FFA726;
+            --error: #E53935;
+            --neutral-50: #fafbfc;
+            --neutral-100: #f5f7fa;
+            --neutral-200: #edf0f7;
+            --neutral-300: #e1e8f0;
+            --neutral-400: #c8d3e0;
+            --neutral-500: #9ca3af;
+            --neutral-600: #6b7280;
+            --neutral-700: #4b5563;
+            --neutral-800: #374151;
+            --neutral-900: #1f2937;
             
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04);
+            
+            --gradient-primary: linear-gradient(135deg, #0A2463 0%, #3E92CC 50%, #1E88E5 100%);
+            --gradient-secondary: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         /* Language Switcher */
@@ -232,7 +236,8 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(30, 58, 138, 0.9) 100%);
+            background: var(--gradient-primary);
+            opacity: 0.9;
         }
 
         .hero-content {
@@ -244,10 +249,15 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .hero-subtitle {
@@ -273,9 +283,26 @@
         }
 
         .btn-primary {
-            background: white;
-            color: var(--primary);
+            background: var(--gradient-primary);
+            color: white;
             box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
         }
 
         .btn-primary:hover {
@@ -285,11 +312,14 @@
 
         /* Alert Banner */
         .alert-banner {
-            background: linear-gradient(90deg, var(--warning), var(--error));
+            background: var(--gradient-primary);
             color: white;
-            padding: 1rem;
+            padding: 1.25rem;
             text-align: center;
             font-weight: 600;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
         }
 
         /* Sections */
@@ -312,11 +342,35 @@
 
         .card {
             background: white;
-            border-radius: 1rem;
-            padding: 2rem;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
             box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
-            border: 1px solid var(--neutral-200);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(30, 136, 229, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(30, 136, 229, 0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card:hover {
@@ -436,11 +490,12 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             z-index: 1000;
             padding: 1rem 0;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
+            border-bottom: 1px solid rgba(30, 136, 229, 0.1);
         }
 
         /* Footer */
@@ -1217,6 +1272,44 @@
         </div>
     </section>
 
+    <!-- 1对1高端咨询服务 -->
+    <section style="background: var(--neutral-50); padding: 3rem 0; border-top: 1px solid var(--neutral-200); margin-top: 2rem;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--neutral-800);">PNG(新几内亚)投资机会1对1高端咨询服务</h2>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+                <!-- 初阶版本 -->
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 200px;">
+                    <h3 style="color: var(--primary-600); margin-bottom: 1rem;">初阶版本</h3>
+                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1RwNQmDsz76jaujRuuaXHhr7"
+                      publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE">
+                    </stripe-buy-button>
+                </div>
+
+                <!-- 进阶版本 -->
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 200px;">
+                    <h3 style="color: var(--success-600); margin-bottom: 1rem;">进阶版本</h3>
+                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1RwNNpDsz76jaujRAm1p86Af"
+                      publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE">
+                    </stripe-buy-button>
+                </div>
+
+                <!-- 高级VIP -->
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 200px;">
+                    <h3 style="color: var(--warning-600); margin-bottom: 1rem;">高级VIP</h3>
+                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1RwNRkDsz76jaujRTrK8jFZx"
+                      publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE">
+                    </stripe-buy-button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1248,35 +1341,44 @@
                     <p>更新：2025年8月6日</p>
                 </div>
             </div>
-            
-            <!-- Stripe Payment Section -->
-            <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); margin: 2rem 0; border-radius: 1rem;">
-                <h3 style="color: white; margin-bottom: 1rem;">💼 专业咨询服务</h3>
-                <p style="color: white; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    获取一对一专业投资咨询，包括项目尽调、政策解读、风险评估、落地支持等全方位服务
-                </p>
-                
-                <!-- Stripe Buy Button -->
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1RtjlLDsz76jaujRubZQhl9b"
-                  publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE"
-                >
-                </stripe-buy-button>
-                
-                <script async
-                  src="https://js.stripe.com/v3/buy-button.js">
-                </script>
-            </div>
-            
-            <!-- Image Gallery -->
-            <div style="padding: 2rem 0; border-top: 1px solid var(--neutral-700); margin-bottom: 2rem;">
-                <h3 style="color: white; text-align: center; margin-bottom: 1.5rem;">💬 付费后添加我们，获取专业咨询（telegram、WhatsApp、微信）</h3>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <img src="images/tele.jpg" alt="投资巴布亚新几内亚专业咨询 - Telegram联系方式" title="投资巴新专业顾问Telegram" style="width: 200px; height: 150px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <img src="images/wapp.jpg" alt="投资巴布亚新几内亚专业咨询 - WhatsApp联系方式" title="投资巴新专业顾问WhatsApp" style="width: 200px; height: 150px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <img src="images/wechat.jpg" alt="投资巴布亚新几内亚专业咨询 - 微信联系方式" title="投资巴新专业顾问微信" style="width: 200px; height: 150px; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+
+            <!-- 1对1高端咨询服务 -->
+            <section style="background: var(--neutral-50); padding: 3rem 0; border-top: 1px solid var(--neutral-200); margin-top: 2rem;">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: var(--neutral-800);">PNG(新几内亚)投资机会1对1高端咨询服务</h2>
+                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+                        <!-- 初阶版本 -->
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 200px;">
+                            <h3 style="color: var(--primary-600); margin-bottom: 1rem;">初阶版本</h3>
+                            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                            <stripe-buy-button
+                              buy-button-id="buy_btn_1RwNQmDsz76jaujRuuaXHhr7"
+                              publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE">
+                            </stripe-buy-button>
+                        </div>
+
+                        <!-- 进阶版本 -->
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 200px;">
+                            <h3 style="color: var(--success-600); margin-bottom: 1rem;">进阶版本</h3>
+                            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                            <stripe-buy-button
+                              buy-button-id="buy_btn_1RwNNpDsz76jaujRAm1p86Af"
+                              publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE">
+                            </stripe-buy-button>
+                        </div>
+
+                        <!-- 高级VIP -->
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 200px;">
+                            <h3 style="color: var(--warning-600); margin-bottom: 1rem;">高级VIP</h3>
+                            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                            <stripe-buy-button
+                              buy-button-id="buy_btn_1RwNRkDsz76jaujRTrK8jFZx"
+                              publishable-key="pk_live_51Ray53Dsz76jaujRQPq4DTG1urKFpjwLoAa7NgNJeMInXieHd6uEOAapzIABDU87jXAKRQH1HI18oe24xroVf6O000yEynlNeE">
+                            </stripe-buy-button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
             
             <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--neutral-700);">
                 <p itemprop="copyrightNotice">&copy; 2025 投资巴布亚新几内亚官方指南 | investpng.com | 基于2025年8月最新权威信息</p>
