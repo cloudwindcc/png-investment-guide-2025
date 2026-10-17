@@ -1,0 +1,26 @@
+# Invest South Pacific
+
+> Independent South Pacific business and investment information, with English-first market guides and a Chinese edition.
+
+Canonical site: https://investsouthpacific.com/
+Source review date: 2026-10-17. This is an editorial review date, not a live data feed.
+
+## Market guides
+
+- [Papua New Guinea](https://investsouthpacific.com/markets/papua-new-guinea/): The Investment Promotion Authority provides investor information, business introductions and registration resources. Begin with its official services when researching agriculture, fisheries, tourism or a local operating business.
+- [Fiji](https://investsouthpacific.com/markets/fiji/): Investment Fiji introduces tourism, commercial agriculture and renewable energy among its investment sectors. Its resources offer an official starting point for market research and investor enquiries.
+- [Vanuatu](https://investsouthpacific.com/markets/vanuatu/): Vanuatu’s investment agency introduces tourism, primary production and processing opportunities. Its sector information provides a starting point for checking business eligibility and discussing operating requirements.
+- [Samoa](https://investsouthpacific.com/markets/samoa/): Samoa’s Ministry of Commerce, Industry and Labour publishes investment resources covering tourism, agriculture, ICT and renewable energy. Its investment unit supports enquiries about registration and industry development.
+- [Solomon Islands](https://investsouthpacific.com/markets/solomon-islands/): Invest Solomons introduces tourism infrastructure, fisheries, agribusiness, manufacturing and energy. The foreign investment division provides market information and investor services for establishment and expansion.
+- [Tonga](https://investsouthpacific.com/markets/tonga/): Tonga’s official investment portal introduces tourism, fisheries and agroprocessing. Its investor services explain foreign investment certification, business establishment and routes to local business contacts.
+
+## Research and services
+
+- [Official sources and review method](https://investsouthpacific.com/research/)
+- [Business services and USD pricing](https://investsouthpacific.com/services/)
+- [Cash-flow scenario planner](https://investsouthpacific.com/tools/): Calculates user-supplied assumptions, not forecast investment returns.
+- [About the publisher](https://investsouthpacific.com/about/): Independent; government links do not imply affiliation.
+- [Chinese edition](https://investsouthpacific.com/zh/)
+- [Structured source directory](https://investsouthpacific.com/sources.json)
+
+For current project-specific rules, use the official sources linked on each market guide. Service availability and scope are confirmed before booking.

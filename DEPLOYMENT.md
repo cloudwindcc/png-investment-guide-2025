@@ -1,78 +1,42 @@
-# Papua New Guinea Investment Guide 2025
+# Cloudflare Pages deployment
 
-## Cloudflare Pages Deployment Guide
+Primary production hostname: **investsouthpacific.com**.
 
-This folder contains the complete Papua New Guinea Investment Guide website optimized for Cloudflare Pages deployment.
+The repository includes the generated static site at its root. Keep the existing Pages root-output configuration, or explicitly configure:
 
-### Files Structure
+- Production branch: `main`
+- Build command: `npm run build && npm test`
+- Output directory: `.`
+- Node version: 22 or later
 
+No environment variables, API credentials or package installation are required to render the site. Generated pages are committed, preserving the current buildless deployment.
+
+## Review and release
+
+Use a `codex/` branch and a pull request against `main`. Review the Cloudflare branch preview. Merge only after owner approval; do not push this work directly to production.
+
+```sh
+npm run build
+npm test
+npm run test:browser
+node scripts/build.mjs --check
+node scripts/verify.mjs --release
 ```
-├── index.html                    # Main website (upgraded from ultimate-enhanced.html)
-├── _redirects                   # Cloudflare Pages routing rules
-├── additional-projects-optimized.html  # Additional projects page
-├── additional-projects.html      # Legacy projects page
-├── beautiful-version.html       # Alternative version
-├── seo-optimized.html          # SEO optimized version
-├── k.jpeg                      # Image assets
-├── tele.jpg                    # Image assets
-├── wapp.jpg                    # Image assets
-├── wechat.jpg                  # Image assets
-└── DEPLOYMENT.md               # This deployment guide
-```
 
-### Features
+The last command requires three configured USD payment links. Verify their live status, merchant, exact service, one-time amount and currency in Stripe before release.
 
-- **Responsive Design**: Works on all devices
-- **2025 Latest Policies**: Updated with August 2025 policy changes
-- **Investment Calculator**: Interactive ROI calculator
-- **Project Database**: 30+ specific investment opportunities
-- **Official Contacts**: Direct links to PNG government agencies
-- **Success Stories**: Real case studies and lessons learned
-- **Registration Guide**: Step-by-step company setup process
+## Routing
 
-### Cloudflare Pages Setup
+- `/` is English, `/zh/` Chinese; each market has both editions.
+- `_redirects` maps former URLs to relevant permanent destinations.
+- Unknown paths use `404.html` with a 404 status. Do not restore the old catch-all homepage rewrite.
+- The production `pages.dev` hostname redirects to the primary domain; branch and hash previews remain available.
+- The www redirect requires a separate `www.investsouthpacific.com` Pages binding and DNS record before it can receive requests.
 
-1. **Connect Repository**: Link your GitHub/GitLab repository to Cloudflare Pages
-2. **Build Settings**:
-   - Build command: `echo "No build required"`
-   - Build output directory: `/`
-   - Root directory: `/`
-3. **Environment Variables**: None required
-4. **Custom Domain**: Optional - can use Cloudflare's subdomain
+Check `/`, `/zh/`, `/markets/`, `/services/`, `/robots.txt`, `/sitemap.xml` and a missing URL on preview and after approved publication. Sitemap URLs must use the current primary domain.
 
-### Deployment Steps
+## Payments and infrastructure
 
-1. **Direct Upload via Dashboard**:
-   - Go to Cloudflare Pages dashboard
-   - Create new project
-   - Upload all files directly
-   - Set custom domain if desired
+Stripe hosts checkout. The contact form opens an email draft or copies text; it does not claim to submit mail through a server. See `docs/PAYMENTS.md`.
 
-2. **Git Integration**:
-   - Push all files to GitHub/GitLab
-   - Connect repository to Cloudflare Pages
-   - Automatic deployment on push
-
-### Routing Configuration
-
-The `_redirects` file handles:
-- Main page routing to index.html
-- Direct access to all HTML files
-- SPA-style routing for all paths
-- 200 status codes for proper SPA behavior
-
-### Key URLs
-
-- **Main Guide**: `https://yourdomain.com/`
-- **Additional Projects**: `https://yourdomain.com/additional-projects-optimized.html`
-- **Legacy Checklist**: `https://yourdomain.com/beautiful-version.html`
-
-### Contact Information
-
-- **China Embassy**: info@cloudwindai.com
-- **PNG Investment Authority**: info@ipa.gov.pg
-- **Website Updates**: Based on 2025 August policies
-
----
-
-**Note**: All content is based on 2025 August official policies and market data. Investment decisions should be made after consulting with professional advisors.
+CSP currently permits local resources; checkout uses normal navigation. If adding an analytics provider, update the privacy notice and extend CSP only for its verified resources.

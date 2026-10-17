@@ -1,127 +1,70 @@
-# 2025巴布亚新几内亚投资终极指南 - 项目完整说明
+# Invest South Pacific
 
-## 🌏 项目概述
-这是一个专为投资者设计的巴布亚新几内亚投资信息门户网站，提供2025年最新政策解读、投资项目清单、注册指南等一站式中文服务。项目包含中英文双语版本，面向中国及国际投资者。
+English-first regional business and investment guide at **https://investsouthpacific.com/**, with a complete Chinese edition at `/zh/`.
 
-## 📁 项目结构
+Six island market guides focus on Papua New Guinea, Fiji, Vanuatu, Samoa, Solomon Islands and Tonga. Every guide links to official sources and shows an actual editorial review date. The publisher is independent of those agencies.
 
-### 🏠 核心文件
-- `index.html` - 中文版主页面（投资指南完整版）
-- `index-en.html` - 英文版主页面
-- `additional-projects-optimized.html` - 新增优化项目清单
-- `beautiful-version.html` - 美化版本页面
-- `ultimate-enhanced.html` - 终极增强版页面
-- `investSouthPacific.html` - 南太平洋投资页面
+## Develop and validate
 
-### 📊 内容支持文件
-- `enhanced-content.md` - 增强内容包（政策、项目、案例分析）
-- `seo-keywords-analysis.md` - SEO关键词分析
-- `investment-guide-prompt.md` - 投资指南提示词
-- `sitemap.xml` - 网站地图
-- `robots.txt` - 搜索引擎爬虫配置
-- `_redirects` - 重定向配置
+Node.js 22 or later is sufficient. No third-party runtime or build dependencies are required.
 
-### 🗂️ 部署文档
-- `DEPLOYMENT.md` - 部署说明文档
-- `GITHUB_UPLOAD.md` - GitHub上传指南
+```sh
+npm run build
+npm test
+npm run dev
+```
 
-## 🎯 核心功能模块
+Generated HTML is committed at the repository root, retaining compatibility with the existing buildless Cloudflare Pages deployment.
 
-### 📈 投资项目清单（2025年旗舰项目）
-- **🛢️ Papua LNG项目**: 125亿美元，2028-2030投产，政府年收入21亿基那
-- **⛏️ Wafi-Golpu金铜矿**: 1300万盎司黄金+440万吨铜，2028年H2投产
-- **⚡ Edevu水电项目**: 2.6亿美元，50MW清洁电力，2025年Q4运营
-- **📱 VDF运营商投资**: 8.5亿美元全国5G网络升级，2025-2028年
-- **🏢 莫尔兹北港房地产**: 12亿美元280公顷滨海开发，每平米$150
-- **🏦 巴新银行股权**: 15%全国性商业银行股权，年化股息8-12%
+```sh
+npm run test:browser
+node scripts/build.mjs --check
+node scripts/verify.mjs --release
+```
 
-### 🏛️ 最新政策解读（2025年8月更新）
-- **⚖️ 矿业法案新规**: 国家可获30%股权（延期支付），特许权费5-10%
-- **🏭 经济特区超级优惠**: 前10年零企业所得税，设备进口全免关税
-- **💱 外汇管制新指令**: 超300万基那需完整尽职调查，必需品优先处理
-- **📋 公司注册新规**: 6步完整流程，总费用3510人民币，20-35个工作日
+Browser checks require an installed Chromium browser. Set `BROWSER_PATH` if needed and `SCREENSHOT_DIR` to choose an output folder. They exercise responsive layouts, mobile navigation and focus, filtering, calculation, enquiry copying, resources, CSP and content without JavaScript. They never send an enquiry or submit a payment.
 
-### 💰 投资回报计算器（四大投资类型）
-- **金矿投资**: 年化收益30-50%，回本周期5-7年，政府持股30%
-- **棕榈油种植**: 年化收益20-30%，回本周期2-3年，政府持股0%
-- **基建承包**: 年化收益15-25%，回本周期3-5年，政府持股5-15%
-- **零售连锁**: 年化收益15-25%，回本周期1-2年，政府持股0%
+Set `PREVIEW_URL` to run the same browser checks against a deployed Cloudflare branch preview instead of the local server.
 
-### 🏦 核心机构与银行指南
-- **🏛️ 政府机构**:
-  - IPA投资促进局：公司注册、投资审批
-  - IRC税务局：税务登记、在线申报
-  - BPNG央行：外汇管理、银行监管
-- **🏦 主要银行**:
-  - BSP银行：最大银行，全国网络最广
-  - Kina银行：第二大银行，数字服务领先
-  - TISA银行：全牌照商业银行
-  - Credit银行：新兴数字银行
+The release check requires all three verified live USD payment links. Until they are configured, service buttons open the enquiry path. Old HKD links must not be reused for USD offers.
 
-## 🛠️ 技术特色
+## Source layout
 
-### 🎨 设计特点
-- **响应式设计**: 完美适配移动端和桌面端
-- **现代化UI**: 渐变色彩、卡片布局、悬停效果
-- **双语支持**: 中英文无缝切换
-- **交互体验**: 平滑滚动、动态计算器、实时更新
+| File | Purpose |
+| --- | --- |
+| `data/site.mjs` | Market copy, references, review date, translations and service descriptions |
+| `data/payments.json` | Public Stripe IDs and checkout URLs, with no API credentials |
+| `scripts/templates.mjs` | Shared pages, bilingual routing, metadata and schema |
+| `scripts/build.mjs` | Generates all bilingual pages, 404, redirects, headers and discovery files |
+| `assets/site.css` | Responsive styles and local system fonts |
+| `assets/site.js` | Accessible navigation, filters, enquiries and analytics hooks |
+| `assets/scenario.mjs` | Cash-flow model, shared by the page and independent tests |
+| `scripts/verify.mjs` | Links, metadata, source provenance, routing and model checks |
 
-### 🔧 技术实现
-- **前端框架**: 纯HTML5+CSS3+JavaScript
-- **样式系统**: CSS变量统一配色方案
-- **交互功能**: JavaScript投资回报计算器
-- **性能优化**: 字体预加载、资源压缩、CDN加速
-- **SEO优化**: 完整meta标签、结构化数据、关键词布局
+## Services
 
-### 📱 用户体验
-- **一站式平台**: 投资信息、政策解读、注册指南全覆盖
-- **权威信息**: 基于2025年8月最新政策，实时更新
-- **实用工具**: 投资回报计算器、官方资源对接
-- **风险提示**: 成功案例与失败警示并重
-- **多语言**: 中英文双语支持
+Fixed-price services initially cover **Papua New Guinea**. Other markets require a quotation.
 
-## 🚀 官方资源对接
+| Service | One-time price |
+| --- | --- |
+| One-hour telephone consultation | US$199 |
+| Local company registration | US$399 |
+| Full-service agency support and local resource introductions | US$999 |
 
-### 📞 核心联系方式
-- **中国驻巴新经商处**: info@cloudwindai.com
-- **PNG投资促进局**: info@ipa.gov.pg | www.ipa.gov.pg
-- **第二届PNG特别经济区峰会**: pngsezsummit2025.com
-- **峰会时间**: 2025年8月31日-9月3日，莫尔兹比港APEC Haus
+Confirm scope, timing and official or third-party costs before payment. See [payment setup](docs/PAYMENTS.md) and [Cloudflare deployment](DEPLOYMENT.md).
 
-### 🌐 网站访问
-- **主域名**: pnginvestor.com
-- **中文版**: /index.html
-- **英文版**: /index-en.html
-- **新增项目**: /additional-projects-optimized.html
+## Search and AI discovery
 
-## 💡 使用指南
+The static pages include self-canonical URLs, reciprocal language alternates, descriptive titles, a canonical sitemap, semantic headings, source citations and real 404s. Schema identifies the actual publisher and mirrors visible content. Government affiliations and investment return forecasts are not invented.
 
-### 🎯 投资者使用流程
-1. **政策了解**: 阅读最新2025年8月投资政策
-2. **项目筛选**: 使用投资回报计算器评估项目
-3. **官方对接**: 通过官方渠道联系相关机构
-4. **注册公司**: 按照6步流程完成公司注册
-5. **专业咨询**: 获取一对一投资咨询服务
+`sources.json` and `llms.txt` supplement the visible source material. No special file guarantees inclusion in an AI answer. See [Google's guidance](https://developers.google.com/search/docs/appearance/ai-features).
 
-### 🔍 快速导航
-- **最新政策**: 查看矿业法案、经济特区优惠、外汇管制
-- **项目清单**: 浏览125亿美元旗舰项目投资机会
-- **注册指南**: 了解3510元人民币完整注册流程
-- **机构银行**: 对接IPA、IRC、BSP等核心机构
+For content updates, review the official material, change the relevant copy and actual review date, then rebuild. Do not advance review dates solely because a URL returns 200.
 
-## 📊 项目价值
+The map is generated from actual [Natural Earth 1:50m country boundaries](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson), stored locally and projected across the date line. The six selected country outlines are data-derived. Natural Earth data is [public domain](https://www.naturalearthdata.com/about/terms-of-use/).
 
-### ✨ 独特优势
-- **时效性**: 基于2025年8月最新政策信息
-- **权威性**: 官方资源对接，中国驻巴新经商处支持
-- **全面性**: 从政策到项目到注册的全流程指南
-- **实用性**: 投资回报计算器、官方联系方式、具体费用明细
+## Conversion measurement
 
-### 🎯 目标用户
-- **中国投资者**: 寻求海外投资机会的企业和个人
-- **国际投资者**: 关注巴布亚新几内亚市场的全球投资者
-- **服务机构**: 投资咨询、法律服务、财务规划等专业机构
+The browser emits `isp:analytics` custom events and forwards them to an existing `dataLayer` if configured: `service_selected`, `checkout_click`, `enquiry_draft_opened`, `enquiry_copied`, `market_filter`, `scenario_calculated`. Enquiry fields and free-text search are omitted. No analytics provider or account ID is fabricated.
 
----
-
-**© 2025 投资巴布亚新几内亚官方指南 | pnginvestor.com | 基于2025年8月最新权威信息**
+Checkout clicks measure intent. Completed payments must be verified in Stripe records or webhook events. The site does not mark a click as a successful purchase.

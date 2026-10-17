@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pnginvestor.com/</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://pnginvestor.com/index-en.html</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pnginvestor.com/additional-projects-optimized.html</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pnginvestor.com/seo-optimized.html</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pnginvestor.com/ultimate-enhanced.html</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pnginvestor.com/beautiful-version.html</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://investsouthpacific.com/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/"/></url>
+  <url><loc>https://investsouthpacific.com/services/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/services/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/services/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/services/"/></url>
+  <url><loc>https://investsouthpacific.com/research/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/research/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/research/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/research/"/></url>
+  <url><loc>https://investsouthpacific.com/tools/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/tools/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/tools/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/tools/"/></url>
+  <url><loc>https://investsouthpacific.com/about/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/about/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/about/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/about/"/></url>
+  <url><loc>https://investsouthpacific.com/privacy/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/privacy/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/privacy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/privacy/"/></url>
+  <url><loc>https://investsouthpacific.com/terms/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/terms/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/terms/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/terms/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/papua-new-guinea/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/papua-new-guinea/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/papua-new-guinea/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/papua-new-guinea/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/fiji/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/fiji/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/fiji/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/fiji/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/vanuatu/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/vanuatu/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/vanuatu/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/vanuatu/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/samoa/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/samoa/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/samoa/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/samoa/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/solomon-islands/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/solomon-islands/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/solomon-islands/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/solomon-islands/"/></url>
+  <url><loc>https://investsouthpacific.com/markets/tonga/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/tonga/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/tonga/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/tonga/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/services/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/services/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/services/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/services/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/research/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/research/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/research/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/research/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/tools/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/tools/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/tools/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/tools/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/about/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/about/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/about/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/about/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/privacy/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/privacy/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/privacy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/privacy/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/terms/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/terms/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/terms/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/terms/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/papua-new-guinea/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/papua-new-guinea/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/papua-new-guinea/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/papua-new-guinea/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/fiji/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/fiji/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/fiji/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/fiji/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/vanuatu/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/vanuatu/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/vanuatu/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/vanuatu/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/samoa/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/samoa/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/samoa/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/samoa/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/solomon-islands/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/solomon-islands/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/solomon-islands/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/solomon-islands/"/></url>
+  <url><loc>https://investsouthpacific.com/zh/markets/tonga/</loc><lastmod>2026-10-17</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://investsouthpacific.com/markets/tonga/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://investsouthpacific.com/zh/markets/tonga/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://investsouthpacific.com/markets/tonga/"/></url>
 </urlset>
