@@ -1,0 +1,87 @@
+{
+  "publisher": "Invest South Pacific",
+  "canonical": "https://investsouthpacific.com",
+  "reviewed": "2026-10-17",
+  "methodology": "https://investsouthpacific.com/research/",
+  "markets": [
+    {
+      "name": "Australia",
+      "url": "https://investsouthpacific.com/markets/australia/",
+      "summary": "Explore Australia’s energy, advanced manufacturing and agrifood sectors. Austrade provides industry resources and investor guidance for businesses researching establishment, acquisitions and expansion.",
+      "officialSources": [
+        "https://international.austrade.gov.au/en/do-business-with-australia/invest-in-australia",
+        "https://international.austrade.gov.au/en/do-business-with-australia/sectors"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "New Zealand",
+      "url": "https://investsouthpacific.com/markets/new-zealand/",
+      "summary": "Invest New Zealand’s sector resources cover renewable energy, innovative food production, aquaculture and digital infrastructure. Use its published information to frame a project and contact the investment team.",
+      "officialSources": [
+        "https://www.investnz.govt.nz/",
+        "https://www.investnz.govt.nz/sectors-overview"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "Fiji",
+      "url": "https://investsouthpacific.com/markets/fiji/",
+      "summary": "Investment Fiji introduces tourism, commercial agriculture and renewable energy among its investment sectors. Its resources offer an official starting point for market research and investor enquiries.",
+      "officialSources": [
+        "https://www.investmentfiji.org.fj/investment-opportunities/sector-opportunities",
+        "https://www.investmentfiji.org.fj/article/investment-fiji-sets-strategic-alignment-to-fijis-growth-ambition-targets"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "Papua New Guinea",
+      "url": "https://investsouthpacific.com/markets/papua-new-guinea/",
+      "summary": "The Investment Promotion Authority provides investor information, business introductions and registration resources. Begin with its official services when researching agriculture, fisheries, tourism or a local operating business.",
+      "officialSources": [
+        "https://www.ipa.gov.pg/",
+        "https://www.ipa.gov.pg/public/help.aspx?cn=InvestorServicingExportPromotion"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "Vanuatu",
+      "url": "https://investsouthpacific.com/markets/vanuatu/",
+      "summary": "Vanuatu’s investment agency introduces tourism, primary production and processing opportunities. Its sector information provides a starting point for checking business eligibility and discussing operating requirements.",
+      "officialSources": [
+        "https://investvanuatu.vu/sectors-opportunities/",
+        "https://investvanuatu.vu/investment-opportunities-and-key-sectors/"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "Samoa",
+      "url": "https://investsouthpacific.com/markets/samoa/",
+      "summary": "Samoa’s Ministry of Commerce, Industry and Labour publishes investment resources covering tourism, agriculture, ICT and renewable energy. Its investment unit supports enquiries about registration and industry development.",
+      "officialSources": [
+        "https://www.mcil.gov.ws/services/industry/"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "Solomon Islands",
+      "url": "https://investsouthpacific.com/markets/solomon-islands/",
+      "summary": "Invest Solomons introduces tourism infrastructure, fisheries, agribusiness, manufacturing and energy. The foreign investment division provides market information and investor services for establishment and expansion.",
+      "officialSources": [
+        "https://www.investsolomons.gov.sb/",
+        "https://www.investsolomons.gov.sb/unlocking-opportunities-in-priority-sectors"
+      ],
+      "sourceReviewed": "2026-10-17"
+    },
+    {
+      "name": "Tonga",
+      "url": "https://investsouthpacific.com/markets/tonga/",
+      "summary": "Tonga’s official investment portal introduces tourism, fisheries and agroprocessing. Its investor services explain foreign investment certification, business establishment and routes to local business contacts.",
+      "officialSources": [
+        "https://www.investtonga.gov.to/",
+        "https://www.investtonga.gov.to/step-by-step-guide-to-starting-a-business/step-2-foreign-investment-certification"
+      ],
+      "sourceReviewed": "2026-10-17"
+    }
+  ]
+}

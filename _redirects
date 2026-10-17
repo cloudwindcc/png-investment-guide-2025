@@ -1,7 +1,21 @@
-/ /index.html 200
-/index.html /index.html 200
-/additional-projects-optimized.html /additional-projects-optimized.html 200
-/additional-projects.html /additional-projects.html 200
-/beautiful-version.html /beautiful-version.html 200
-/seo-optimized.html /seo-optimized.html 200
-/* /index.html 200
+# Keep the registered primary hostname canonical (requires a www binding).
+https://www.investsouthpacific.com/* https://investsouthpacific.com/:splat 301
+https://png-investment-guide-2025.pages.dev/* https://investsouthpacific.com/:splat 301
+
+# Existing public URLs retain useful destinations.
+/index.html / 301
+/index-en.html / 301
+/index-en / 301
+/investSouthPacific.html / 301
+/investSouthPacific / 301
+/zh/index.html /zh/ 301
+/additional-projects-optimized.html /markets/papua-new-guinea/ 301
+/additional-projects-optimized /markets/papua-new-guinea/ 301
+/additional-projects.html /markets/papua-new-guinea/ 301
+/additional-projects /markets/papua-new-guinea/ 301
+/ultimate-enhanced.html /markets/papua-new-guinea/ 301
+/ultimate-enhanced /markets/papua-new-guinea/ 301
+/beautiful-version.html /research/ 301
+/beautiful-version /research/ 301
+/seo-optimized.html /markets/papua-new-guinea/ 301
+/seo-optimized /markets/papua-new-guinea/ 301
