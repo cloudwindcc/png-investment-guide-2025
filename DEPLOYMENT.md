@@ -30,8 +30,8 @@ The last command requires three configured USD payment links. Verify their live 
 - `/` is English, `/zh/` Chinese; each market has both editions.
 - `_redirects` maps former URLs to relevant permanent destinations.
 - Unknown paths use `404.html` with a 404 status. Do not restore the old catch-all homepage rewrite.
-- The production `pages.dev` hostname redirects to the primary domain; branch and hash previews remain available.
-- The www redirect requires a separate `www.investsouthpacific.com` Pages binding and DNS record before it can receive requests.
+- Production verification: the default `pages.dev` hostname serves the new site with primary-domain canonicals. Redirecting it requires a Cloudflare account-level Bulk Redirect limited to the exact production hostname; preserve paths/query strings and leave branch/hash previews available. Hostname source rules in `_redirects` are unsupported: https://developers.cloudflare.com/pages/configuration/redirects/#advanced-redirects
+- The www hostname requires DNS/Pages binding plus an account-level redirect rule before it can redirect to the apex domain. These account-side changes are not configured by this repository.
 
 Check `/`, `/zh/`, `/markets/`, `/services/`, `/robots.txt`, `/sitemap.xml` and a missing URL on preview and after approved publication. Sitemap URLs must use the current primary domain.
 
