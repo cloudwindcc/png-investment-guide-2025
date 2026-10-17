@@ -3,8 +3,27 @@
   "mode": "live",
   "serviceMarket": "Papua New Guinea",
   "plans": {
-    "consultation": { "amount": 19900, "productId": null, "priceId": null, "paymentLinkId": null, "url": null },
-    "registration": { "amount": 39900, "productId": null, "priceId": null, "paymentLinkId": null, "url": null },
-    "representation": { "amount": 99900, "productId": null, "priceId": null, "paymentLinkId": null, "url": null }
-  }
+    "consultation": {
+      "amount": 19900,
+      "productId": "prod_VSHnzY7TumETOn",
+      "priceId": "price_1URNDYDsz76jaujRVyvqUyFf",
+      "paymentLinkId": "plink_1URNDaDsz76jaujRqHNYK0DL",
+      "url": "https://buy.stripe.com/3cIaEX04191f1kq3sPb7y0a"
+    },
+    "registration": {
+      "amount": 39900,
+      "productId": "prod_VSHnS2SnQYwInC",
+      "priceId": "price_1URNDdDsz76jaujRTuEGUjsI",
+      "paymentLinkId": "plink_1URNDfDsz76jaujRZkc7lHMq",
+      "url": "https://buy.stripe.com/aFa4gzeYV1yN8MS1kHb7y0b"
+    },
+    "representation": {
+      "amount": 99900,
+      "productId": "prod_VSHnMeDeJ0QdKp",
+      "priceId": "price_1URNDiDsz76jaujROyY8BskE",
+      "paymentLinkId": "plink_1URNDkDsz76jaujRnZWe1AI5",
+      "url": "https://buy.stripe.com/dRm14n9EBgtH4wC3sPb7y0c"
+    }
+  },
+  "merchantId": "acct_1Ray53Dsz76jaujR"
 }
