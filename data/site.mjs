@@ -18,30 +18,19 @@ export const sectors = [
 ];
 
 export const regions = [
-  { id: 'australasia', en: 'Australia & New Zealand', zh: '澳大利亚与新西兰' },
   { id: 'melanesia', en: 'Melanesia', zh: '美拉尼西亚' },
   { id: 'polynesia', en: 'Polynesia', zh: '波利尼西亚' }
 ];
 
 export const markets = [
   {
-    id: 'australia', code: 'AU', en: 'Australia', zh: '澳大利亚', region: 'australasia',
-    sectors: ['energy', 'manufacturing', 'agriculture', 'digital'],
-    lead: ['Scale, established industries and a broad sector landscape.', '成熟产业、多元行业与规模化业务。'],
-    summary: ['Explore Australia’s energy, advanced manufacturing and agrifood sectors. Austrade provides industry resources and investor guidance for businesses researching establishment, acquisitions and expansion.', '研究澳大利亚能源、先进制造与农业食品领域。Austrade 提供行业资料与投资者指引，协助了解设立、收购和业务扩张。'],
-    agency: 'Austrade',
-    source: 'https://international.austrade.gov.au/en/do-business-with-australia/invest-in-australia',
-    extraSource: 'https://international.austrade.gov.au/en/do-business-with-australia/sectors',
-    verify: ['Which foreign investment approvals and sector permits apply to this transaction?', '拟议交易适用哪些外国投资审批与行业许可？']
-  },
-  {
-    id: 'new-zealand', code: 'NZ', en: 'New Zealand', zh: '新西兰', region: 'australasia',
-    sectors: ['energy', 'agriculture', 'ocean', 'digital'],
-    lead: ['Innovation, food systems and the energy transition.', '创新、食品体系与能源转型。'],
-    summary: ['Invest New Zealand’s sector resources cover renewable energy, innovative food production, aquaculture and digital infrastructure. Use its published information to frame a project and contact the investment team.', 'Invest New Zealand 的行业资料涵盖可再生能源、创新食品、水产养殖和数字基础设施，可用于梳理项目方向并联系投资团队。'],
-    agency: 'Invest New Zealand', source: 'https://www.investnz.govt.nz/',
-    extraSource: 'https://www.investnz.govt.nz/sectors-overview',
-    verify: ['Does the project need overseas investment consent, land access permissions or sector approvals?', '项目是否需要海外投资同意、土地使用许可或行业审批？']
+    id: 'papua-new-guinea', code: 'PG', aliases: 'PNG 巴新', en: 'Papua New Guinea', zh: '巴布亚新几内亚', region: 'melanesia',
+    sectors: ['agriculture', 'ocean', 'tourism'],
+    lead: ['Local enterprise, natural resources and market entry.', '本地企业、自然资源与市场进入。'],
+    summary: ['The Investment Promotion Authority provides investor information, business introductions and registration resources. Begin with its official services when researching agriculture, fisheries, tourism or a local operating business.', '投资促进局提供投资资料、商业对接和企业登记资源。研究农业、渔业、旅游或本地运营业务时，可先查阅 IPA 官方服务。'],
+    agency: 'Investment Promotion Authority', source: 'https://www.ipa.gov.pg/',
+    extraSource: 'https://www.ipa.gov.pg/public/help.aspx?cn=InvestorServicingExportPromotion',
+    verify: ['Which reserved activities, foreign enterprise certification and sector licences apply to this exact business?', '具体业务适用哪些保留活动规定、外国企业认证与行业许可？']
   },
   {
     id: 'fiji', code: 'FJ', en: 'Fiji', zh: '斐济', region: 'melanesia',
@@ -52,15 +41,6 @@ export const markets = [
     source: 'https://www.investmentfiji.org.fj/investment-opportunities/sector-opportunities',
     extraSource: 'https://www.investmentfiji.org.fj/article/investment-fiji-sets-strategic-alignment-to-fijis-growth-ambition-targets',
     verify: ['Are the proposed site, regulatory approvals and utility connections ready for this project?', '拟选场地、监管审批和公共设施连接能否支持项目？']
-  },
-  {
-    id: 'papua-new-guinea', code: 'PG', en: 'Papua New Guinea', zh: '巴布亚新几内亚', region: 'melanesia',
-    sectors: ['agriculture', 'ocean', 'tourism'],
-    lead: ['Local enterprise, natural resources and market entry.', '本地企业、自然资源与市场进入。'],
-    summary: ['The Investment Promotion Authority provides investor information, business introductions and registration resources. Begin with its official services when researching agriculture, fisheries, tourism or a local operating business.', '投资促进局提供投资资料、商业对接和企业登记资源。研究农业、渔业、旅游或本地运营业务时，可先查阅 IPA 官方服务。'],
-    agency: 'Investment Promotion Authority', source: 'https://www.ipa.gov.pg/',
-    extraSource: 'https://www.ipa.gov.pg/public/help.aspx?cn=InvestorServicingExportPromotion',
-    verify: ['Which reserved activities, foreign enterprise certification and sector licences apply to this exact business?', '具体业务适用哪些保留活动规定、外国企业认证与行业许可？']
   },
   {
     id: 'vanuatu', code: 'VU', en: 'Vanuatu', zh: '瓦努阿图', region: 'melanesia',
@@ -117,7 +97,7 @@ export const plans = [
 
 export const faqs = [
   { q: ['Where should I start when exploring South Pacific investment?', '研究南太平洋投资，应从哪里开始？'], a: ['Define the business activity and shortlist markets before comparing specific projects. Our market guides link to the relevant investment agencies so you can check current requirements and discuss your proposed activity directly.', '先明确业务活动、筛选市场，再比较具体项目。各市场指南提供投资机构链接，便于查阅现行要求并直接咨询拟开展的业务。'] },
-  { q: ['Which markets does this guide cover?', '本指南覆盖哪些市场？'], a: ['This guide currently covers Australia, New Zealand, Fiji, Papua New Guinea, Vanuatu, Samoa, Solomon Islands and Tonga. It is a selected regional guide rather than an exhaustive list of Pacific countries and territories.', '目前覆盖澳大利亚、新西兰、斐济、巴布亚新几内亚、瓦努阿图、萨摩亚、所罗门群岛和汤加，为区域精选指南。'] },
+  { q: ['Which markets does this guide cover?', '本指南覆盖哪些市场？'], a: ['This guide focuses on Papua New Guinea, Fiji, Vanuatu, Solomon Islands, Samoa and Tonga. Papua New Guinea is the initial market for our fixed-price services; other island markets are available by enquiry.', '指南聚焦巴布亚新几内亚、斐济、瓦努阿图、所罗门群岛、萨摩亚与汤加。固定价格服务先覆盖巴新，其他岛国市场请先咨询。'] },
   { q: ['Is Invest South Pacific a government agency?', 'Invest South Pacific 是政府机构吗？'], a: ['Invest South Pacific is an independent information and consultation website. Links to government and investment agency resources are references; they do not imply endorsement, affiliation or a partnership.', 'Invest South Pacific 是独立的信息与咨询网站。政府与投资机构链接用于资料参考，不代表获得背书、隶属关系或合作授权。'] },
   { q: ['How current is the information?', '资料如何保持时效？'], a: ['The review date identifies when the linked sources were checked for this edition. Requirements can change between reviews. Follow the official source for a market and confirm project-specific rules with the relevant authority before acting.', '复核日期表示本版查阅所链接资料的日期。要求可能在两次复核间发生变化，行动前请查阅官方来源并向主管机构确认项目适用规则。'] },
   { q: ['What services can I book?', '可以预约哪些服务？'], a: ['Papua New Guinea services are US$199 for a one-hour telephone consultation, US$399 for local company registration, and US$999 for full-service agency support and local resource introductions. Other markets are quoted individually. Confirm scope, timing and any official fees before payment.', '巴布亚新几内亚服务包括 US$199 的1小时电话咨询、US$399 的当地公司注册，以及 US$999 的全套代理与线下资源对接。其他市场单独询价。付款前请确认范围、时间与官方费用。'] },

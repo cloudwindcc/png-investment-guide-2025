@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { site, markets } from '../data/site.mjs';
 import { document, home, marketIndex, marketPage, servicesPage, researchPage, toolsPage, aboutPage, policyPage, notFound, route, escape } from './templates.mjs';
+import { renderMap } from './map.mjs';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export function getPages() {
@@ -21,6 +22,7 @@ export async function build() {
   const versions = {};
   for (const [key, file] of [['css', 'assets/site.css'], ['js', 'assets/site.js']]) versions[key] = createHash('sha256').update(await fs.readFile(path.join(root, file))).digest('hex').slice(0, 10);
   const files = new Map();
+  files.set('assets/pacific-map.svg', await renderMap());
   const pages = getPages();
   for (const page of pages) files.set(`${route(page.key, page.lang).slice(1)}index.html`, document(page, page.key, page.lang, versions));
   files.set('404.html', document(notFound(), '', 'en', versions));

@@ -5,22 +5,12 @@
   "methodology": "https://investsouthpacific.com/research/",
   "markets": [
     {
-      "name": "Australia",
-      "url": "https://investsouthpacific.com/markets/australia/",
-      "summary": "Explore Australia’s energy, advanced manufacturing and agrifood sectors. Austrade provides industry resources and investor guidance for businesses researching establishment, acquisitions and expansion.",
+      "name": "Papua New Guinea",
+      "url": "https://investsouthpacific.com/markets/papua-new-guinea/",
+      "summary": "The Investment Promotion Authority provides investor information, business introductions and registration resources. Begin with its official services when researching agriculture, fisheries, tourism or a local operating business.",
       "officialSources": [
-        "https://international.austrade.gov.au/en/do-business-with-australia/invest-in-australia",
-        "https://international.austrade.gov.au/en/do-business-with-australia/sectors"
-      ],
-      "sourceReviewed": "2026-10-17"
-    },
-    {
-      "name": "New Zealand",
-      "url": "https://investsouthpacific.com/markets/new-zealand/",
-      "summary": "Invest New Zealand’s sector resources cover renewable energy, innovative food production, aquaculture and digital infrastructure. Use its published information to frame a project and contact the investment team.",
-      "officialSources": [
-        "https://www.investnz.govt.nz/",
-        "https://www.investnz.govt.nz/sectors-overview"
+        "https://www.ipa.gov.pg/",
+        "https://www.ipa.gov.pg/public/help.aspx?cn=InvestorServicingExportPromotion"
       ],
       "sourceReviewed": "2026-10-17"
     },
@@ -31,16 +21,6 @@
       "officialSources": [
         "https://www.investmentfiji.org.fj/investment-opportunities/sector-opportunities",
         "https://www.investmentfiji.org.fj/article/investment-fiji-sets-strategic-alignment-to-fijis-growth-ambition-targets"
-      ],
-      "sourceReviewed": "2026-10-17"
-    },
-    {
-      "name": "Papua New Guinea",
-      "url": "https://investsouthpacific.com/markets/papua-new-guinea/",
-      "summary": "The Investment Promotion Authority provides investor information, business introductions and registration resources. Begin with its official services when researching agriculture, fisheries, tourism or a local operating business.",
-      "officialSources": [
-        "https://www.ipa.gov.pg/",
-        "https://www.ipa.gov.pg/public/help.aspx?cn=InvestorServicingExportPromotion"
       ],
       "sourceReviewed": "2026-10-17"
     },

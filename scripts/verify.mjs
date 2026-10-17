@@ -27,7 +27,7 @@ for (const [url, html] of documents) {
   assert.match(html, /<meta name="description" content="[^"]{20,}"/);
   assert.ok(html.includes(`<link rel="canonical" href="${site.origin + url}">`), `${label}: self canonical`);
   for (const lang of ['en', 'zh']) assert.ok(html.includes(`hreflang="${lang === 'zh' ? 'zh-CN' : 'en'}" href="${site.origin + route(page.key, lang)}"`), `${label}: reciprocal language URL`);
-  assert.doesNotMatch(html, /pnginvestor\.com|investpng\.com|yourwebsite\.com|2025|GA_MEASUREMENT_ID|pk_live_|buy_btn_/i, `${label}: no stale branding, dated claims or legacy payment embeds`);
+  assert.doesNotMatch(html, /pnginvestor\.com|investpng\.com|yourwebsite\.com|2025|GA_MEASUREMENT_ID|pk_live_|buy_btn_|Australia|New Zealand|澳大利亚|新西兰/i, `${label}: no stale branding, excluded markets, dated claims or legacy payment embeds`);
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]+?)<\/script>/)[1]);
   assert.ok(schema['@graph'].some(entity => entity['@type'] === 'Organization' && entity.url === site.origin + '/'), `${label}: publisher identity`);
   for (const entity of schema['@graph']) if (entity['@type'] === 'Service') {
@@ -63,6 +63,11 @@ assert.doesNotMatch(robots, /sitemap-index\.xml/);
 assert.equal((documents.get('/markets/').match(/data-market data-name=/g) || []).length, markets.length);
 for (const market of markets) assert.ok(documents.get(`/markets/${market.id}/`).includes(market.source), `Official source for ${market.id}`);
 const css = await fs.readFile(path.join(root, 'assets/site.css'), 'utf8');
+const map = await fs.readFile(path.join(root, 'assets/pacific-map.svg'), 'utf8');
+const geography = JSON.parse(await fs.readFile(path.join(root, 'data/geography/pacific-markets.geojson'), 'utf8'));
+assert.deepEqual(geography.features.map(feature => feature.properties.code).sort(), ['FJI', 'PNG', 'SLB', 'TON', 'VUT', 'WSM']);
+assert.equal((map.match(/data-country=/g) || []).length, 6, 'Map uses all six real country geometries');
+assert.doesNotMatch(map, /AUSTRALIA|NEW ZEALAND|SCHEMATIC/);
 const definitions = new Set([...css.matchAll(/(--[\w-]+)\s*:/g)].map(match => match[1]));
 for (const match of css.matchAll(/var\(\s*(--[\w-]+)/g)) assert.ok(definitions.has(match[1]), `Undefined CSS variable ${match[1]}`);
 assert.ok(Buffer.byteLength(css) < 60000, 'Shared CSS budget < 60 KB uncompressed');

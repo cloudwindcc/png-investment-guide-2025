@@ -4,11 +4,13 @@ import path from 'node:path';
 import { serve } from './serve.mjs';
 import { launchBrowser, pause } from './cdp.mjs';
 import { getPages } from './build.mjs';
+import { markets } from '../data/site.mjs';
 import { route } from './templates.mjs';
 
 const output = path.resolve(process.env.SCREENSHOT_DIR || '.cache/browser-review');
 await fs.mkdir(output, { recursive: true });
-const { server, url } = await serve(0);
+const local = process.env.PREVIEW_URL ? null : await serve(0);
+const url = process.env.PREVIEW_URL?.replace(/\/$/, '') || local.url;
 const browser = await launchBrowser();
 const exceptions = [], failedResponses = [], report = [];
 browser.onEvent(event => {
@@ -46,7 +48,7 @@ try {
   await page.evaluate('document.getElementById("market-search").value="no-such-market"; document.getElementById("market-search").dispatchEvent(new Event("input"))');
   assert.equal(await page.evaluate('document.getElementById("market-empty").hidden'), false);
   await page.evaluate('document.getElementById("reset-filters").click()');
-  assert.equal(await page.evaluate('document.querySelectorAll("[data-market]:not([hidden])").length'), 8);
+  assert.equal(await page.evaluate('document.querySelectorAll("[data-market]:not([hidden])").length'), markets.length);
   await page.navigate(url + '/tools/');
   const before = await page.evaluate('document.getElementById("result-npv").textContent');
   await page.evaluate('document.getElementById("scenario-capital").value="200000"; document.getElementById("scenario-capital").dispatchEvent(new Event("input",{bubbles:true}))');
@@ -73,10 +75,10 @@ try {
   // All primary navigation and market content remains available without JavaScript.
   await page.call('Emulation.setScriptExecutionDisabled', { value: true });
   await page.navigate(url + '/markets/');
-  assert.equal(await page.evaluate('document.querySelectorAll("[data-market]:not([hidden])").length'), 8);
+  assert.equal(await page.evaluate('document.querySelectorAll("[data-market]:not([hidden])").length'), markets.length);
   await page.call('Emulation.setScriptExecutionDisabled', { value: false });
   assert.deepEqual(exceptions, [], 'No runtime or security policy errors');
   assert.deepEqual(failedResponses, [], 'No missing page resources');
   await fs.writeFile(path.join(output, 'results.json'), JSON.stringify({ layouts: report, interactions: ['mobile menu + Escape focus', 'sector/search/empty/reset filters', 'cash-flow update + invalid input', 'market-prefilled enquiry + clipboard', 'no PII in browser storage', 'crawlable content without JS'], exceptions, failedResponses }, null, 2));
   console.log(`PASS: ${report.length} responsive page layouts, menu, filters, calculator, enquiry, progressive enhancement, no runtime/CSP/resource errors. Screenshots: ${output}`);
-} finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+} finally { await browser.close(); if (local) await new Promise(resolve => local.server.close(resolve)); }
