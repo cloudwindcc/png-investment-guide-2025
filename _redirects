@@ -1,7 +1,4 @@
-# Keep the registered primary hostname canonical (requires a www binding).
-https://www.investsouthpacific.com/* https://investsouthpacific.com/:splat 301
-https://png-investment-guide-2025.pages.dev/* https://investsouthpacific.com/:splat 301
-
+# Hostname redirects require Cloudflare account-level rules.
 # Existing public URLs retain useful destinations.
 /index.html / 301
 /index-en.html / 301
