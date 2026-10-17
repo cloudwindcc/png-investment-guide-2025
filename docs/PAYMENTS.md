@@ -10,6 +10,10 @@ The owner approved these **one-time USD** prices for **Papua New Guinea**. Other
 
 Confirm scope, schedule and any official or third-party costs before purchase.
 
+## Current checkout status
+
+Activated on 17 October 2026 in merchant `acct_1Ray53Dsz76jaujR`. All three links were verified through the Stripe API and hosted checkout: live mode, one-time USD 199/399/999, matching product names and amounts. Public IDs and URLs are in `data/payments.json`. No payment was submitted during verification.
+
 ## Activate checkout
 
 Use a separate live product, a one-time USD price and a Payment Link for each service in the existing merchant account. Never substitute an HKD price for a USD offer.
